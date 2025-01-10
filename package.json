@@ -9,10 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "html-include-element": "^0.3.0",
     "parcel": "^2.13.3"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.13.3",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^2.0.1",
     "sass": "^1.83.1"
   }
 }
