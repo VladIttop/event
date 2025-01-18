@@ -1,0 +1,65 @@
+@import "~node_modules/modern-normalize/modern-normalize.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+input {
+  outline: none;
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+}
+input {
+  outline: none;
+  border: none;
+}
+
+button {
+  display: block;
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.inner-container {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 610px;
+  }
+
+    @media (min-width: 1280px) {
+        width: 930px;
+    }
+}

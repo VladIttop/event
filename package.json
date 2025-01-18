@@ -9,12 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "handlebars": "^4.7.8",
     "html-include-element": "^0.3.0",
+    "modern-normalize": "^3.0.1",
     "parcel": "^2.13.3"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.13.3",
     "parcel-reporter-clean-dist": "^1.0.4",
+    "parcel-transformer-hbs": "^1.0.4",
     "posthtml-include": "^2.0.1",
     "sass": "^1.83.1"
   }
