@@ -1,0 +1,36 @@
+<div class="circle__img-container">
+    <img src="{{modalImageUrl}}" alt="{{modalImageAlt}}" class="circle__img"/>
+</div>
+<div class="modal-innner-container">
+    <div class="modal-img-container">
+        <img src="{{modalImageUrl}}" alt="{{modalImageAlt}}" class="modal__img">
+    </div>
+    <ul class="modal-list"><li class="modal-list__item">
+        <h5 class="modal-list__text">info</h5>
+        <p class="modal-list__text">{{modalListText}}</p>
+    </li>
+    <li class="modal-list__item">
+                <h5 class="modal-list__text">when</h5>
+                <p class="modal-list__text">{{modalListText}}</p>
+    </li>
+    <li class="modal-list__item"><h5 class="modal-list__text">where</h5>
+    <p class="modal-list__text">{{modalListText}}</p></li>
+    <li class="modal-list__item"><h5 class="modal-list__text">who</h5>
+    <p class="modal-list__text">{{modalListText}}</p></li>
+    <li class="modal-list__item"><h5 class="modal-list__text">prices</h5>
+    <div class="modal-price-container">
+    <svg class="modal-code__svg"><use></use></svg>
+    <p class="modal-list__text">{{modalListText}}</p>
+    <button class="modal__button-buy">
+        Buy Tickets
+    </button>
+        <svg class="modal-code__svg">
+            <use></use>
+        </svg>
+        <p class="modal-list__text">{{modalListTextVip}}</p>
+            <button class="modal__button-buy--vip">
+                Buy Tickets
+            </button>
+    </div></li></ul>
+    <button class="modal__button-autor">More from this author</button>
+</div>
