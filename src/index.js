@@ -1,1 +1,1 @@
-console.log("Hello, world!");
+import "./JS/partials/cards"

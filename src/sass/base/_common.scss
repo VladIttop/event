@@ -59,7 +59,23 @@ img {
     width: 610px;
   }
 
-    @media (min-width: 1280px) {
-        width: 930px;
-    }
+  @media (min-width: 1280px) {
+    width: 930px;
+  }
+}
+
+main {
+  background-image: url("../images/main-bg/phone-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  @media (min-width: 768px) {
+    background-image: url("../images/main-bg/tablet-bg.jpg");
+  }
+
+  @media (min-width: 1280px) {
+    background-image: url("../images/main-bg/body-bg.jpg");
+  }
 }
