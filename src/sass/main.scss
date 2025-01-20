@@ -1,2 +1,5 @@
-@import "./base/common";
-@import "./partials/cards";
+@use "./utils/mixins";
+@use "./utils/colors";
+@use "./base/common";
+@use "./partials/cards";
+
