@@ -1,27 +1,31 @@
 header{
-    background-image: url(./src/images/header/header-computer.jpg);
+    background-image: url('./src/images/header/header-phone.jpg');
 }
 
 .header_svg{
-    width: 477px;
-    height: 402px;
+    width: 180px;
+    height: 213.97px;
 }
 
 .header-title{
     font-family: var(--font-family);
-font-weight: 900;
-font-size: 50px;
-text-align: center;
-color: #dc56c5;
+    font-weight: 900;
+    font-size: 18px;
+    text-align: center;
+    color: #dc56c5
 }
 
 .search-bar__input{
+    border-radius: 20px;
     width: 270px;
     height: 40px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.2);
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 16px;
     color: #939393;
+
 }
 
 .choose-country__input{
@@ -30,5 +34,18 @@ color: #dc56c5;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 16px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.2);
     color: #939393;
+}
+
+.search-bar__svg{
+width: 12px;
+height: 12px;
+}
+
+.choose-country__svg{
+width: 12px;
+height: 12px;
 }
