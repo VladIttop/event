@@ -1,0 +1,34 @@
+header{
+    background-image: url(./src/images/header/header-computer.jpg);
+}
+
+.header_svg{
+    width: 477px;
+    height: 402px;
+}
+
+.header-title{
+    font-family: var(--font-family);
+font-weight: 900;
+font-size: 50px;
+text-align: center;
+color: #dc56c5;
+}
+
+.search-bar__input{
+    width: 270px;
+    height: 40px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #939393;
+}
+
+.choose-country__input{
+    width: 270px;
+    height: 40px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #939393;
+}
