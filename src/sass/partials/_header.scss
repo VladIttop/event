@@ -1,13 +1,17 @@
 header{
     background-image: url('.././images/header/header-phone.jpg');
 }
-
+.inner-container{
+    margin: 0;
+}
 .header_svg{
-    width: 180px;
-    height: 213.97px;
+    width: 106.99px;
+    height: 90px;
+
 }
 
 .header-title{
+    text-transform: uppercase;
     font-family: var(--font-family);
     font-weight: 900;
     font-size: 18px;
@@ -19,24 +23,26 @@ header{
     border-radius: 20px;
     width: 270px;
     height: 40px;
+    padding: 10px 118px 10px 30px;
     backdrop-filter: blur(20px);
-    background: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 16px;
     color: #939393;
-
+    
 }
 
 .choose-country__input{
     width: 270px;
     height: 40px;
+    padding: 10px 113px 10px 30px;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 16px;
     border-radius: 20px;
     backdrop-filter: blur(20px);
-    background: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     color: #939393;
 }
 
@@ -48,4 +54,58 @@ height: 12px;
 .choose-country__svg{
 width: 12px;
 height: 12px;
+}
+@media (min-width: 768px) {
+    header{
+        background-image: url('.././images/header/header-tablet.jpg');
+        width: 768px;
+        height: 364px;
+    }
+    .header-up{
+        position: relative;
+        display: flex;
+        align-items: flex-start; 
+        justify-content: center; 
+        height: 100px;
+    }
+    .header_svg{
+        width: 180px;
+        height: 151px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .header-title{
+        margin-top:40px;
+        font-size: 30px;  
+        position: relative;
+        text-align: center;
+        // margin-left: 208px;
+        // margin: right;
+        // margin-top: 40px;
+    //    width: 353px;
+    }
+  
+    .search-bar{
+
+        width: 270px;
+        height:40px;
+        margin-left: 99px;
+        margin-right: 30px;
+        margin-top: 27px;
+    }
+    .choose-country{
+
+        width: 270px;
+        height:40px;  
+        margin-top: 27px;
+    }
+
+
+    .container-div{
+        display: flex;
+    }
+
+
 }
