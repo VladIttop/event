@@ -20,9 +20,10 @@ header{
     text-align: center;
     color: #dc56c5
 }
-
+.search-bar{
+    position: absolute;
+}
 .search-bar__input{
-    
     border-radius: 20px;
     width: 270px;
     height: 40px;
@@ -33,7 +34,7 @@ header{
     font-weight: 400;
     font-size: 16px;
     color: #939393;
-    
+
 }
 
 .choose-country__input{
@@ -58,6 +59,9 @@ margin: 25px 25px 25px 25px;}
 .search-bar__svg{
 width: 12px;
 height: 12px;
+position: relative;
+right: 30px;
+top: 15px;
 }
 
 .choose-country__svg{
