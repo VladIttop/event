@@ -1,19 +1,21 @@
-@mixin text($fsize: 16px,
-    $lheight: normal,
-    $fweight: 400,
-    $fstyle: normal,
-    $talign: center) {
-    font-size: $fsize;
-    line-height: $lheight;
-    font-weight: $fweight;
-    font-style: $fstyle;
-    text-align: $talign;
+@mixin text(
+  $fsize: 16px,
+  $lheight: normal,
+  $fweight: 400,
+  $fstyle: normal,
+  $talign: center
+) {
+  font-size: $fsize;
+  line-height: $lheight;
+  font-weight: $fweight;
+  font-style: $fstyle;
+  text-align: $talign;
 }
 
 @mixin flex($justify: center, $direction: row, $align: center, $wrap: wrap) {
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
-    flex-direction: $direction;
-    flex-wrap: $wrap;
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
 }
