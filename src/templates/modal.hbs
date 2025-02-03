@@ -1,41 +1,41 @@
             <div class="modal-circle__img-container">
-                <img src="./img/circle.png" alt="circle__img" class="modal-circle__img" />
+                <img src="{{modalCircleImg}}" alt="circle__img" class="modal-circle__img" />
             </div>
             <div class="modal-innner-container">
                 <div class="modal__img-container">
-                    <img src="./img/pic.png" alt="modal__img" class="modal__img" />
+                    <img src="{{modalImg}}" alt="modal__img" class="modal__img" />
                 </div>
                 <ul class="modal-list">
                     <li class="modal-list__item">
                         <h5 class="modal-list__subtitle">info</h5>
                         <p class="modal-list__text">
-                            {{modalListInfo}}
+                            {{modalInfo}}
                         </p>
                     </li>
                     <li class="modal-list__item">
                         <h5 class="modal-list__subtitle">when</h5>
-                        <p class="modal-list__text modal-list__text--margin">{{modalListData}}</p>
-                        <p class="modal-list__text">{{modalListTime}}</p>
+                        <p class="modal-list__text modal-list__text--margin">{{modalDate}}</p>
+                        <p class="modal-list__text">{{modalTime}}</p>
                     </li>
                     <li class="modal-list__item">
                         <h5 class="modal-list__subtitle">where</h5>
-                        <p class="modal-list__text modal-list__text--margin">{{modalListCity}}</p>
-                        <p class="modal-list__text">{{modalListPlace}}</p>
+                        <p class="modal-list__text modal-list__text--margin">{{modalCity}}</p>
+                        <p class="modal-list__text">{{modalPlace}}</p>
                     </li>
                     <li class="modal-list__item">
                         <h5 class="modal-list__subtitle">who</h5>
-                        <p class="modal-list__text">{{modalListAuthor}}</p>
+                        <p class="modal-list__text">{{modalAuthor}}</p>
                     </li>
                     <li class="modal-list__item">
                         <h5 class="modal-list__subtitle modal-list__subtitle--margin">prices</h5>
                         <div class="modal-price-container">
                             <img class="modal-barcode__icon" src="./images/modal/ticket.svg" alt="barcode" />
-                            <p class="modal-list__text">{{modalListPrice}}</p>
+                            <p class="modal-list__text">{{modalPrice}}</p>
                         </div>
                         <button class="modal-list__button-buy">Buy Tickets</button>
                         <div class="modal-price-container">
                             <img class="modal-barcode__icon" src="./images/modal/ticket.svg" alt="barcode" />
-                            <p class="modal-list__text">{{modalListPriceVip}}</p>
+                            <p class="modal-list__text">{{modalPriceVip}}</p>
                         </div>
                         <button class="modal-list__button-buy modal-list__button-buy--vip">
                             Buy Tickets
