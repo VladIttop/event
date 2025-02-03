@@ -10,11 +10,12 @@ const getEvents = async function () {
   const data = await response.json();
   const events = data._embedded.events;
   events.forEach((element) => {
+   const id = element.id;
     const name = element.name;
     const date = element.dates.start.localDate;
     const place = element._embedded.venues[0].name;
     const image = element.images[0].url;
-    const card = cardTemplate({ name, date, image, place });
+    const card = cardTemplate({id,name, date, image, place });
     cardsList.innerHTML += card;
   });
 };
