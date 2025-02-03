@@ -34,10 +34,10 @@ header{
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 16px;
-    color: #939393;
+    color: black;
 
 }
-.choose-country__selct{
+.choose-country__select{
     border-radius: 20px;
     width: 270px;
     height: 40px;
@@ -128,7 +128,7 @@ height: 12px;
 
 
 }
-@media (min-width: 1440px) {
+@media (min-width: 1280px) {
     header{
         background-image: url('.././images/header/header-computer.jpg');
         width: 1280px;
