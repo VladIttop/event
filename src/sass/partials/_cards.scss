@@ -1,6 +1,7 @@
 .cards {
   padding-top: 51px;
   padding-bottom: 60px;
+  @include flex($direction: column);
   @media screen and (min-width: 1280px) {
     padding-bottom: 80px;
   }
