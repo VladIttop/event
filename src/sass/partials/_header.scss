@@ -68,10 +68,6 @@ header {
   top: 15px;
 }
 
-.choose-country__svg {
-  width: 12px;
-  height: 12px;
-}
 @media (min-width: 768px) {
   header {
     background-image: url(".././images/header/header-tablet.jpg");
@@ -149,4 +145,18 @@ header {
   .choose-country {
     margin: 0;
   }
+}
+.dropdown {
+  display: flex;
+  justify-content: center;
+}
+.choose_btn {
+  width: 270px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 10px 113px 10px 30px;
+  color: #939393;
+  font-size: 16px;
+//   position: relative;
 }
