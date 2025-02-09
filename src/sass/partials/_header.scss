@@ -67,11 +67,11 @@ header {
   right: 30px;
   top: 15px;
 }
-.container-div{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+.container-div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 768px) {
   header {
@@ -164,7 +164,7 @@ header {
   padding: 10px 113px 10px 30px;
   color: #939393;
   font-size: 16px;
-
+  cursor: pointer;
 }
 .choose-bar__svg {
   width: 15px;
@@ -172,4 +172,21 @@ header {
   top: 15px;
   right: 30px;
   position: absolute;
+}
+.dropdown-list {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  width: 270px;
+  backdrop-filter: blur(10px);
+  padding: 10px 0;
+  height: 150px;
+  overflow: auto;
+  display: none;
+}
+.dropdown_item{
+    width: 100%;
+    border-bottom: black solid 1px;
+    padding: 10px 20px;
+    color: #0E0E0E;
+    font-size: 16px;
 }
