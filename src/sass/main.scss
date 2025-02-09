@@ -1,5 +1,8 @@
-@use "./utils/mixins";
-@use "./utils/colors";
-@use "./base/common";
-@use "./partials/cards";
+
+@import "./utils/mixins";
+@import "./utils/colors";
+@import "./base/common";
+@import "./partials/header";
+@import "./partials/cards";
+
 
