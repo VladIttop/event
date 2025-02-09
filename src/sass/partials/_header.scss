@@ -67,7 +67,11 @@ header {
   right: 30px;
   top: 15px;
 }
-
+.container-div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 @media (min-width: 768px) {
   header {
     background-image: url(".././images/header/header-tablet.jpg");
@@ -158,5 +162,12 @@ header {
   padding: 10px 113px 10px 30px;
   color: #939393;
   font-size: 16px;
-//   position: relative;
+  //   position: relative;
+}
+.choose-bar__svg {
+  width: 15px;
+  height: 10px;
+  top: 15px;
+  right: 30px;
+  position: relative;
 }
