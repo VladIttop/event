@@ -1,2 +1,2 @@
 import "./JS/partials/cards"
-import "./JS/partials/modal";
+import "./JS/partials/modal.js";
