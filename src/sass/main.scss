@@ -1,7 +1,7 @@
 
-@use "./utils/mixins";
-@use "./utils/colors";
-@use "./base/common";
-@use "./partials/cards";
-@use "./partials/pagination";
-
+@import "./utils/mixins";
+@import "./utils/colors";
+@import "./base/common";
+@import "./partials/cards";
+@import "./partials/pagination";
+@import "./partials/header";
