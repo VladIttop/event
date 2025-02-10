@@ -2,7 +2,19 @@ const pagination = document.querySelector(".pagination");
 const buttons = Array.from(pagination.querySelectorAll("button"));
 const maxPage = 29;
 const visibleCount = 5;
-let startPage = 2;
+let startPage = 1;
+
+const API_KEY = "pxORlZn34CAbwS2qgAa40tdvGlRFZL5L";
+
+const getEvents = async()=>{
+  const response = await fetch(
+    `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${API_KEY}&page=${startPage}`
+  );
+  const data = await response.json();
+  const events = data._embedded.events;
+  render(events);
+}
+
 
 const middleButtons = buttons.slice(1, -2);
 const dotsButton = document.getElementById("dots");
