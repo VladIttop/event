@@ -2,7 +2,9 @@ import cardTemplate from "../../templates/cards.hbs";
 
 const API_KEY = "pxORlZn34CAbwS2qgAa40tdvGlRFZL5L";
 
-export const render = function(event) {
+export default function render(event) {
+  const cardsList = document.getElementById("cardsList");
+  cardsList.innerHTML = '';
   event.forEach((element) => {
     const id = element.id;
      const name = element.name;
