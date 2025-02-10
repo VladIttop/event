@@ -187,11 +187,13 @@ header {
   .header-title {
     font-weight: 900;
     font-size: 50px;
-    left: 345px;
+    text-align: center;
   }
   .container-div {
-    margin-left: 355px;
     margin-top: 104px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
     
   }
   .search-bar {
