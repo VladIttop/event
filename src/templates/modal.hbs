@@ -1,3 +1,7 @@
+
+        <button type="button" class="modal-close__btn">
+            <img class="modal-close__icon" src="{{modalCloseSvg}}" alt="close__icon" />
+        </button>
             <div class="modal-circle__img-container">
                 <img src="{{modalImg}}" alt="circle__img" class="modal-circle__img" />
             </div>
@@ -33,14 +37,7 @@
                             <p class="modal-list__text modal-list__text--uppercase">{{modalPrice}}</p>
                         </div>
                         <button class="modal-list__button-buy">Buy Tickets</button>
-                        <div class="modal-price-container">
-                            <img class="modal-barcode__icon" src="{{modalBarcodeSvg}}" alt="barcode" />
-                            <p class="modal-list__text modal-list__text--uppercase">{{modalPriceVip}}</p>
-                        </div>
-                        <button class="modal-list__button-buy modal-list__button-buy--vip">
-                            Buy Tickets
-                        </button>
                     </li>
                 </ul>
             </div>
-            <button class="modal__button-autor">More from this author</button>
+            <a class="modal__link-autor" href="{{moreFromAuthor}}" target="_blank">More from this author</a>
