@@ -12,16 +12,14 @@ const getEvents = async () => {
       `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${API_KEY}&page=${currentPage}&size=${visibleCount}`
     );
     const data = await response.json();
-    console.log(data)
-    render(data)
-    return data.page ? Math.min(data.page.totalPages, maxPage) : 1;  // render
-  }
-  catch (error) {
+    console.log(data);
+    render(data._embedded.events); // Call render with the correct data
+    return data.page ? Math.min(data.page.totalPages, maxPage) : 1;
+  } catch (error) {
     console.log(error);
     return 1;
   }
 };
-
 const handlePageChange = (pageNumber) => {
   currentPage = pageNumber;
   renderButtons();
