@@ -1,95 +1,76 @@
+import render from "./cards";
 const pagination = document.querySelector(".pagination");
-const buttons = Array.from(pagination.querySelectorAll("button"));
 const maxPage = 29;
-const visibleCount = 5;
-let startPage = 1;
+const visibleCount = 20;
+let currentPage = 1;
 
 const API_KEY = "pxORlZn34CAbwS2qgAa40tdvGlRFZL5L";
 
-const getEvents = async()=>{
-  const response = await fetch(
-    `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${API_KEY}&page=${startPage}`
-  );
-  const data = await response.json();
-  const events = data._embedded.events;
-  render(events);
-}
-
-
-const middleButtons = buttons.slice(1, -2);
-const dotsButton = document.getElementById("dots");
-const firstButton = buttons[0];
-const lastButton = buttons[buttons.length - 1];
-let activeButton = firstButton;
-
-const setActiveButton = (button) => {
-  activeButton.classList.remove("active");
-  button.classList.add("active");
-  activeButton = button;
-};
-
-const handleButtonClick = (pageNum) => {
-  setActiveButton(event.target);
-  console.log(`Page ${pageNum} clicked`);
-
-  if (pageNum === 1) {
-    startPage = 2;
-    updateMiddleButtons();
-    dotsButton.style.display = "inline-block";
-    dotsButton.textContent = "...";
-  } else if (pageNum === maxPage) {
-    startPage = maxPage - visibleCount + 1;
-    updateMiddleButtons();
+const getEvents = async () => {
+  try {
+    const response = await fetch(
+      `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${API_KEY}&page=${currentPage}&size=${visibleCount}`
+    );
+    const data = await response.json();
+    console.log(data)
+    render(data)
+    return data.page ? Math.min(data.page.totalPages, maxPage) : 1;  // render
+  }
+  catch (error) {
+    console.log(error);
+    return 1;
   }
 };
 
-const addEventListenerToButton = (button, pageNum) => {
-  button.textContent = pageNum;
-  button.addEventListener("click", () => handleButtonClick(pageNum));
+const handlePageChange = (pageNumber) => {
+  currentPage = pageNumber;
+  renderButtons();
 };
 
-const updateMiddleButtons = () => {
-  middleButtons.forEach((button, index) => {
-    const pageNum = startPage + index;
-    if (pageNum < maxPage) {
-      addEventListenerToButton(button, pageNum);
-      button.style.display = "inline-block";
-    } else {
-      button.style.display = "none";
+const createButton = (pageNumber) => {
+  const button = document.createElement("button");
+  button.textContent = pageNumber;
+  button.dataset.page = pageNumber;
+  if (pageNumber === currentPage) {
+    button.classList.add("active");
+  }
+  button.addEventListener("click", () => handlePageChange(pageNumber));
+
+  return button;
+};
+
+const renderButtons = async () => {
+  pagination.innerHTML = "";
+  const totalPages = await getEvents();
+  const buttons = [];
+  const maxVisible = 10;
+
+  if (totalPages <= maxVisible) {
+    for (let i = 1; i <= totalPages; i++) {
+      buttons.push(createButton(i));
     }
-  });
-
- 
-  if (startPage + visibleCount >= maxPage) {
-    dotsButton.style.display = "none";
   } else {
-    dotsButton.style.display = "inline-block";
-    dotsButton.textContent = "...";
-    dotsButton.addEventListener("click", updateDots);
+    buttons.push(createButton(1));
+
+    if (currentPage > 3) {
+      buttons.push(document.createTextNode("..."));
+    }
+
+    const start = Math.max(2, currentPage - 2);
+    const end = Math.min(totalPages - 1, currentPage + 2);
+
+    for (let i = start; i <= end; i++) {
+      buttons.push(createButton(i));
+    }
+
+    if (currentPage < totalPages - 2) {
+      buttons.push(document.createTextNode("..."));
+    }
+
+    buttons.push(createButton(totalPages));
   }
 
-  if (startPage + visibleCount >= maxPage - 1) {
-    middleButtons[middleButtons.length - 1].textContent = maxPage - 1;
-    addEventListenerToButton(middleButtons[middleButtons.length - 1], maxPage - 1);
-  }
-
-  if (startPage > 1) {
-    firstButton.textContent = startPage - 1;
-    addEventListenerToButton(firstButton, startPage - 1);
-  } else {
-    firstButton.textContent = 1;
-    addEventListenerToButton(firstButton, 1);
-  }
+  buttons.forEach((button) => pagination.appendChild(button));
 };
 
-const updateDots = () => {
-  startPage += visibleCount;
-  if (startPage + visibleCount - 1 >= maxPage) {
-    startPage = maxPage - visibleCount;
-  }
-  updateMiddleButtons();
-};
-
-addEventListenerToButton(firstButton, 1);
-addEventListenerToButton(lastButton, maxPage);
-updateMiddleButtons();
+renderButtons();
