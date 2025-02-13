@@ -13,7 +13,8 @@ const getEvents = async () => {
     );
     const data = await response.json();
     console.log(data);
-    render(data._embedded.events); // Call render with the correct data
+    render(data._embedded.events); 
+    
     return data.page ? Math.min(data.page.totalPages, maxPage) : 1;
   } catch (error) {
     console.log(error);
