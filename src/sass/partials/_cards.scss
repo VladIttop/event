@@ -10,6 +10,7 @@
 .cards-list {
   @include flex();
   gap: 14px;
+  min-height: 100vw;
 
   @media screen and (min-width: 768px) {
     gap: 27px;
@@ -29,6 +30,7 @@
       width: 180px;
       height: 227px;
     }
+
   }
 
   .cards-item {
@@ -90,4 +92,10 @@
       }
     }
   }
+}
+
+.info  {
+  color: white;
+  font-size: 36px;
+
 }

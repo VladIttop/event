@@ -1,9 +1,9 @@
 import countries from "../countries.json";
 import render from "./cards";
-
 const btn = document.querySelector(".choose_btn");
 const list = document.querySelector(".dropdown-list");
 const cardsList = document.querySelector(".cards-list");
+const pagination = document.querySelector("#pagination_section");
 
 btn.addEventListener("click", () => {
   list.classList.toggle("active");
@@ -30,9 +30,14 @@ const fetchCountries = async function (countryCode) {
     const data = await response.json();
     const events = data._embedded.events;
     render(events);
+    pagination.style.display = "block"
   } catch (error) {
     const cardsList = document.getElementById("cardsList");
-    cardsList.textContent = "No Info Found";
-    
+    cardsList.innerHTML = ""
+    pagination.style.display = "none"
+    const li = document.createElement("h2");
+    li.textContent = "No info found!"
+    li.classList.add("info")
+    cardsList.appendChild(li)
   }
 };
