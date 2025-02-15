@@ -1,7 +1,7 @@
 header {
   background-image: url(".././images/header/header-phone.jpg");
   width: 100vw;
-  height: 364px;
+  height: 100%;
 }
 .inner-container {
   margin: 0;
@@ -119,7 +119,7 @@ header {
   header {
     background-image: url(".././images/header/header-tablet.jpg");
     width: 768px;
-    height: 364px;
+    // height: 364px;
   }
   .header-up {
     height: 100px;
@@ -156,8 +156,6 @@ header {
   .dropdown {
     width: 270px;
     height: 40px;
-    margin-top: 27px;
-
   }
 
   .container-div {
@@ -191,7 +189,6 @@ header {
     justify-content: center;
     display: flex;
     align-items: center;
-    
   }
   .search-bar {
     margin: 0;
