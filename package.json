@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/*.html"
+    "start": "parcel src/*.html",
+    "build": "parcel build index.html --public-url ./event",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +19,7 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.13.3",
+    "gh-pages": "^6.3.0",
     "parcel-reporter-clean-dist": "^1.0.4",
     "parcel-transformer-hbs": "^1.0.4",
     "posthtml-include": "^2.0.1",
