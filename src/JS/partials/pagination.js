@@ -12,7 +12,6 @@ const getEvents = async () => {
       `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${API_KEY}&page=${currentPage}&size=${visibleCount}`
     );
     const data = await response.json();
-    console.log(data);
     render(data._embedded.events); 
     
     return data.page ? Math.min(data.page.totalPages, maxPage) : 1;
