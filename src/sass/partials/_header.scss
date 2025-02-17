@@ -2,6 +2,7 @@ header {
   background-image: url(".././images/header/header-phone.jpg");
   width: 100vw;
   height: 100%;
+  padding: 40px 0;
 }
 
 .header_svg {
@@ -15,6 +16,7 @@ header {
   font-weight: 900;
   font-size: 18px;
   text-align: center;
+  margin: 0 auto; 
   color: #dc56c5;
 }
 .search-bar {
@@ -138,9 +140,9 @@ background-position: center;
   }
 
   .header-title {
-    position: absolute;
-    left: 208px;
-    top: 40px;
+    // position: absolute;
+    // left: 208px;
+    // top: 40px;
     font-size: 30px;
 
     // margin-left: 208px;
@@ -185,7 +187,7 @@ background-position: center;
   .header-title {
     font-weight: 900;
     font-size: 50px;
-    margin-left: 135px;
+
   }
   .container-div {
     margin-top: 104px;
